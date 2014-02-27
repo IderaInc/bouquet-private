@@ -1,0 +1,28 @@
+# Sublime Text
+# ------------
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# OSX
+# ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Node
+# ----
+# The node modules are not to be packaged with this project
+node_modules
+
+# Test Waste
+# ----------
+# Files that can be left over by testing environment
+/tmp
