@@ -1,4 +1,4 @@
-﻿Installation and Usage of Group Tag, Group Info tag ,Chart tag and Data tag.
+Installation and Usage of Group Tag, Group Info tag ,Chart tag and Data tag.
 
 <h4>Installation:</h4>
 
@@ -6,9 +6,9 @@ Configure in conf.json of JSDOC the following for all tags , staticFiles plug-in
 <pre>
 {
     "plugins": [
-        	    "plugins/group/grouptag",
-    		    "plugins/charttag/charttag",
-		        "plugins/datatag/datatag",
+                "plugins/group/group",
+    		    "plugins/chart/chart",
+		        "plugins/data/data",
                 "plugins/staticFiles/staticFiles"
 	           ],
 
@@ -55,11 +55,11 @@ Chart JSON File should contain all the json data that can be passed to FusionCha
     @data  “<dataJsonFileName>”
 
 Data JSON File should contain all the jso4n data that can be passed to FusionCharts constructor.
-<Strong>Right now the json format is simmilar to chart json data where dataSource key is picked up to render JSON data.</strong>
+<b>Right now the json format is simmilar to chart json data where dataSource key is picked up to render JSON data.</b>
 
 
 
-<h5>Command to generate Docs:</h5>
+<h4>Command to generate Docs:</h4>
 
     <path-to-jsdoc-bin>/jsdoc <source-folder-path>  -t <docstrap-tempalte-path>  -c <conf.json    -path>  -u <jsdoc-tutorials-path> -d <destination-folder-path>
 
