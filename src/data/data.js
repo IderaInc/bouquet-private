@@ -16,7 +16,7 @@ exports.defineTags = function(dictionary) {
               var dataArgString=tag.value.match('/{(.*)}/');
               doclet.htmlId = Math.ceil((Math.random()*1000)+1);
 	             var args = fs.readFileSync(dataFilePath,'utf-8');
-              doclet.dataId= dataFilePath.split('.')[0]; 
+              doclet.dataId= dataFilePath.split('.')[0].replace(new RegExp(/\/|\\/g),"_"); 
               doclet.dataSrc = args.replace(new RegExp('{capture}','g'),function(capture) {                       
                        return doclet.dataId;
                 });

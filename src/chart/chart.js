@@ -17,7 +17,7 @@ exports.defineTags = function(dictionary) {
 	            var chartFilePath=tag.value.match(re).toString().replace(/["']/g, "");
                 var chartArgString=tag.value.match('/{(.*)}/');
 	            var args = fs.readFileSync(chartFilePath,'utf-8');
-                doclet.chartId= chartFilePath.split('.')[0]; 
+                doclet.chartId= chartFilePath.split('.')[0].replace(new RegExp(/\/|\\/g),"_"); 
                 doclet.htmlId = Math.ceil((Math.random()*1000)+1);
                 doclet.chartSrc = args.replace(new RegExp('{capture}','g'),function(capture) {                       
                        return doclet.chartId;
