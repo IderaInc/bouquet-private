@@ -21,7 +21,7 @@ var htmlencode = function (str) {
 exports.handlers = {
     newDoclet: function(e) {
         // e.doclet will refer to the newly created doclet
-        // Modify @example values by replacing angle brackets with HTML entities.
+        // Modify @example values by replacing HTML tags with HTML entities.
         (e.doclet.examples) && (_.each(e.doclet.examples, function (example, i) {
             e.doclet.examples[i] = htmlencode(example);
         }));
