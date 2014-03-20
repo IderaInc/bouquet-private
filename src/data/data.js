@@ -1,7 +1,8 @@
 'use strict';
 var fs = require('jsdoc/fs'),
     path = require('jsdoc/path'),
-    jsonDataPath = env.conf.jsonDataPath || "";
+    fc = env.conf.fusioncharts || {},
+    jsonDataPath = fc.jsonDataPath || "";
 
 exports.defineTags = function(dictionary) {
 
