@@ -10,6 +10,6 @@ JSDoc has issues with encoding HTML code examples in `@example` blocks. This plu
 
 * Edit your JSDoc configuration file and add `plugins/exampleEscape/exampleEscape` to the `plugins` array:
 
-        "plugins" : ["...", "plugins/jsdoc-plugins/staticFiles/staticFiles"]
+        "plugins" : ["...", "plugins/jsdoc-plugins/exampleEscape/exampleEscape"]
 
 * Ready to go!
