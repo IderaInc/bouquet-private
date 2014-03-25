@@ -2,7 +2,8 @@
 var fs = require('jsdoc/fs'),
     path = require('jsdoc/path'),
     fc = env.conf.fusioncharts || {},
-    jsonDataPath = fc.jsonDataPath || "";
+    jsonDataPath = fc.jsonDataPath || "",
+    FILENAME_REPLACE_REGEX = /[\\/\-\+]/g;
 
 exports.defineTags = function(dictionary) {
 
@@ -20,7 +21,7 @@ exports.defineTags = function(dictionary) {
 	            var chartFilePath=path.join(jsonDataPath, tag.value.match(re).toString().replace(/["']/g, ""));
                 var chartArgString=tag.value.match('/{(.*)}/');
 	            var args = fs.readFileSync(chartFilePath,'utf-8');
-                doclet.chartId= chartFilePath.split('.')[0].replace(new RegExp(/\/|\\/g),"_");
+                doclet.chartId= chartFilePath.split('.')[0].replace(FILENAME_REPLACE_REGEX,"_");
                 doclet.htmlId = Math.ceil((Math.random()*1000)+1);
                 doclet.chartSrc = args.replace(new RegExp('{capture}','g'),function(capture) {
                        return doclet.chartId;
