@@ -15,7 +15,7 @@ Render live charts using FusionCharts.
 * Optionally, add path to the folder where the data JS files are stored. This option needs to be a part of the `fusioncharts` namespace in the configuration. This path is relative to the directory from which JSDoc is executed:
 
         "fusioncharts": {
-            "jsonDataPath": "./sampledata"
+            "constructorParamSrc": "./sampledata"
         }
 
 * Ready to go!
